@@ -1,0 +1,410 @@
+:root{
+    --primary-color:rgb(28, 28, 28);
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* start NavBar */
+.fixed{
+    position: fixed !important;
+    box-shadow: 0 0 10px 0px;
+}
+.navbar .active{
+    border-bottom: solid 1px white ;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+}
+.navbar{
+    background-color: transparent;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.scrolled{
+    background-color: white !important;
+}
+.scrolled a{
+    color: var(--primary-color) !important;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.scrolled .active{
+    border-bottom: solid 1px var(--primary-color) ;
+    animation: activeIntro 5s cubic-bezier(0.075, 0.82, 0.165, 1)  forwards;
+}
+
+@keyframes activeIntro {
+    0%{border-bottom: solid 1px white ;}
+    100%{
+        border-bottom: solid 1px var(--primary-color);
+    }
+}
+/* end NavBar */
+/* start home */
+.home{
+    background-image: url("../images/imgs/imgs/bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+}
+
+.home .layer{
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.home h1{
+    font-size: 60px;
+}
+.home h5{
+    font-size: 75px;
+}
+.home h5::after{
+    content: "";
+    animation: words 8s alternate infinite;
+}
+@keyframes words{
+    0% {content: "|";}
+    3% {content: " D|";}
+    5% {content: " De|";}
+    6% {content: " Dev|";}
+    8% {content: " Deve|";}
+    10% {content: " Devel|";}
+    12% {content: " Develo|";}
+    15% {content: " Develop|";}
+    17% {content: " Develope|";}
+    19% {content: " Developer|";}
+    21% {content: " Develope|";}
+    23% {content: " Develop|";}
+    25% {content: " Develo|";}
+    27% {content: " Devel|";}
+    29% {content: " Deve|";}
+    31% {content: " Dev|";}
+    33% {content: " De|";}
+    35% {content: " D|";}
+    37% {content: " |";}
+    39% {content: " |";}
+    41% {content: " De|";}
+    43% {content: " Des|";}
+    45% {content: " Desi|";}
+    47% {content: " Desig|";}
+    49% {content: " Design|";}
+    51% {content: " Designe|";}
+    53% {content: " Designer|";}
+    55% {content: " Designer|";}
+    57% {content: " Designe|";}
+    59% {content: " Design|";}
+    61% {content: " Desig|";}
+    63% {content: " Desi|";}
+    65% {content: " Des|";}
+    67% {content: " De|";}
+    69% {content: " D|";}
+    71% {content: " |";}
+    73% {content: " L|";}
+    75% {content: " La|";}
+    77% {content: " Lar|";}
+    79% {content: " Larr|";}
+    81% {content: " Larry|";}
+    83% {content: " Larry |";}
+    85% {content: " Larry D|";}
+    87% {content: " Larry Da|";}
+    89% {content: " Larry Dan|";}
+    91% {content: " Larry Dani|";}
+    93% {content: " Larry Danie|";}
+    95% {content: " Larry Daniel|";}
+    97% {content: " Larry Daniels|";}
+    100% {content: " Larry Daniels|";}
+}
+.home .social div{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 40px;
+    height: 40px;
+}
+/* end home */
+/* start about */
+.about{
+    color: var(--primary-color);
+}
+
+.about .hero-img::after{
+    content: "";
+    background-image: url(../images/imgs/imgs/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: -8%;
+    bottom: -8%;
+    z-index: -1;
+}
+.about .details{
+    height: 450px !important;
+}
+
+.about .bar{
+    width: 100%;
+    height: 25px ;
+    box-shadow: inset 0 0 3px 0px;
+    background-color: rgb(247, 247, 247);
+}
+
+.about .progress-bar{
+    background-color: var(--primary-color);
+}
+
+.about .btn{
+    width: 180px;
+    height: 40px;
+}
+
+.about .download-cv{
+    color:white;
+    background-color: var(--primary-color);
+    transition: 0.5s;
+}
+.about .download-cv:hover{
+    color: var(--primary-color);
+    background-color: white;
+    border:solid 0.5px var(--primary-color)
+}
+
+.about .contact-me{
+    color: var(--primary-color);
+    background-color: white;
+    border:solid 0.5px var(--primary-color);
+    transition: 0.5s;
+}
+.about .contact-me:hover{
+    color:white;
+    background-color: var(--primary-color);
+}
+/* end about */
+/* start services */
+.services{
+    background-color: rgb(247, 247, 247);
+    color: var(--primary-color);
+}
+
+.services h1{
+    font-size: 60px;
+    background-image: url(../images/imgs/imgs/dots.png);
+}
+
+.services .icon{
+    background-color: rgb(247, 247, 247);
+    width: 80px;
+    height: 80px;
+    transition: 0.5s ;
+}
+.services .inner:hover .icon{
+    background-color: var(--primary-color);
+    color:rgb(247, 247, 247);
+    
+}
+/* end services */
+/* start portfolio */
+.portfolio h1{
+    font-size: 60px;
+    background-image: url(../images/imgs/imgs/dots.png);
+}
+
+.portfolio .btn{
+    border: none;
+    border-radius: 0;
+}
+.portfolio .nav .active{
+    animation: active 5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s forwards;
+}
+
+@keyframes active {
+    0%{border-bottom: 2px solid white;}
+    100%{border-bottom: 2px solid var(--primary-color);}
+}
+
+
+.portfolio .details{
+    background-color: white;
+    opacity: 0;
+    top: 5%;
+    left: 2.5%;
+    transition: 0.5s;
+    width: 95%;
+    height: 95%;
+}
+.portfolio .details:hover{
+    top: 2.5%;
+    opacity: 100%;
+}
+
+.portfolio .details:hover .label,.icons{
+    top: 0px
+}
+
+.portfolio .label{
+    top: -15px;
+    transition: 0.5s;
+}
+
+.portfolio .icons div{
+    width: 35px;
+    height: 35px;
+    color: white;
+    background-color: var(--primary-color);
+    transition: 0.5s;
+}
+.portfolio .icons div:hover{
+    color: var(--primary-color);
+    background-color: white;
+    border: 1px solid black;
+}
+.portfolio .icons{
+    bottom: -15px;
+}
+/* end portfolio */
+/* start Testimonials */
+.Testimonials{
+    background-color: rgb(247, 247, 247);
+}
+
+.Testimonials h1{
+    font-size: 60px;
+    background-image: url(../images/imgs/imgs/dots.png);
+}
+
+.Testimonials img{
+    width: 100px;
+}
+.Testimonials .carousel-indicators{
+    bottom: -50px;
+}
+.Testimonials .carousel-indicators button{
+    background-color: #343434;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/* end Testimonials */
+/* start achievements */
+.achievements .item{
+    height: 130px;
+}
+/* end achievements */
+/* start our-team */
+.our-team{
+    background-color: rgb(247, 247, 247);
+}
+.our-team h1{
+    font-size: 60px;
+    background-image: url(../images/imgs/imgs/dots.png);
+}
+.our-team h2{
+    font-size: 40px;
+}
+.our-team .item{
+    width: 400px;
+    height: 100%;
+    overflow: hidden;
+}
+.our-team .person-img{
+    overflow: hidden;
+    height: 80%;
+}
+.our-team img{
+    width: 400px;
+    transform-style: preserve-3d;
+    transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.our-team .details{
+    top: 2.5%;
+    left: 2.5%;
+    width: 95%;
+    height: 95%;
+    padding: 0 20%;
+    background-color: white;
+    opacity: 0;
+    transform: rotateY(180deg) perspective(10px) translateZ(-20px) ;
+    transform-origin: center center;
+
+    transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.our-team .item:hover .details{
+    opacity: 90%;
+    transform: rotateY(0deg) perspective(10px) translateZ(0px);
+}
+.our-team .img:hover img{
+    transform: scale(1.2);
+}
+.our-team .details div{
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.our-team .details div:hover{
+    color: var(--primary-color);
+    background-color: white;
+}
+.our-team .inner{
+    background-color: #343434;
+}
+/* end our-team */
+/* start contact us */
+.contact-us h1{
+    font-size: 60px;
+    background-image: url(../images/imgs/imgs/dots.png);
+}
+.contact-us .methods .icon{
+    background-color: rgb(247, 247, 247);
+    width: 80px;
+    height: 80px;
+    transition: 0.5s ;
+}
+.contact-us .methods .col-md-4:hover .icon{
+    background-color: var(--primary-color);
+    color:rgb(247, 247, 247); 
+}
+
+.contact-us form input{
+    background-color: rgb(247, 247, 247);
+    border: none;
+}
+.contact-us form textarea{
+    background-color: rgb(247, 247, 247);
+    border: none;
+    height: 300px;
+}
+
+
+.contact-us form button{
+    width: 130px;
+    height: 40px;
+    color:white;
+    background-color: var(--primary-color);
+    transition: 0.5s;
+}
+.contact-us form button:hover{
+    color: var(--primary-color);
+    background-color: white;
+    border:solid 0.5px var(--primary-color)
+}
+/* end contact us */
+/* start footer */
+.footer{
+    color: #748182;
+    background-color: var(--primary-color);
+}
+
+
+
+
+/* *{
+    outline: 1px solid red !important;
+} */
